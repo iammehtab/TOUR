@@ -22,7 +22,7 @@ body{
 }
 
 .navbar{
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: 9;
@@ -30,7 +30,6 @@ body{
     height: 100px;
     padding: 20px 10vw;
 }
-
 .navbar.bg{
     background: #161813;
 }
@@ -70,6 +69,7 @@ body{
     justify-content: center;
     align-items: center;
     color: #fff;
+    animation-duration: 10s;
 }
 
 .hero-section-title{
@@ -120,7 +120,7 @@ body{
     z-index: -2;
 }
 
-.background::before, .background::after{
+.background::before .background::after{
     content: '';
     position: absolute;
     left: 0;
@@ -145,6 +145,7 @@ body{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    color: #000;
 }
 
 .grid-item{
@@ -153,6 +154,7 @@ body{
     background: #000;
     opacity: 1;
     transition: .5s;
+    pointer-events: none;
 }
 
 .grid-item.hide{
@@ -238,16 +240,15 @@ body{
 
 .tour-action{
     margin-left: 20px;
-    font-size: 14px;
+    font-size: 15px;
     position: relative;
+    color:#fff;
 }
-
 .tour-action::before{
     content: '';
     position: absolute;
     left: -20px;
     top: 2px;
-    background: url('pin.png');
     width: 15px;
     height: 15px;
     background-size: contain;
@@ -382,6 +383,7 @@ body{
     font-size: 50px;
     font-weight: 300;
     width: 300px;
+    text-decoration: none;
 }
 
 .book-now-text{
@@ -389,16 +391,17 @@ body{
     opacity: 0.5;
     line-height: 25px;
     margin: 30px 0;
+  
 }
 
 .book-now{
-    position: relative;
+    position: absolute;
     padding: 10px 20px;
     outline: none;
     border: none;
     background: #000;
     text-transform: capitalize;
-    color: #fff;
+    color: #e2d9d9;
     border-radius: 20px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
@@ -437,7 +440,7 @@ body{
 
 .footer{
     width: 100%;
-    padding: 100px 10vw;
+    padding: 80px 10vw;
     background: #000;
     display: flex;
     justify-content: space-evenly;
@@ -448,18 +451,55 @@ body{
 
 .footer-logo{
     width: 100px;
-    opacity: 0.3;
 }
 
 .footer-text{
     color: #fff;
-    opacity: 0.5;
     font-size: 20px;
 }
 
 .footer-text p{
-    margin: 20px 0;
+    margin: 30px 20vb;
 }
+
+.contact-form {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    color:white;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    height: 150px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
 
 .copyright-line{
     width: 100%;
