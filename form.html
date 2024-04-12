@@ -1,0 +1,48 @@
+<!-- form -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Booking Form</title>
+  <link rel="stylesheet" href="gg.css">
+</head>
+<body>
+    <div class="background">
+        <div class="booking-form">
+            <h2>Travel Booking Form</h2>
+            <form action="index.php" method="post" name="form">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name"  placeholder=""/>
+ 
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+           
+                <label for="destination">Destination:</label>
+                <input type="text" name="destination" id="destination" required>
+               </select>
+                <label for="departure-date">Departure Date:</label>
+                <input type="date" name="departure-date" id="departure-date" required>
+               
+                <label for="return-date">Return Date:</label>
+                <input type="date" name="return-date" id="return-date" required>
+                <div class="col-50">
+                
+               <div class="cardNumber">Card Number:<br/>
+                <input class="firstfour" placeholder="1111" maxlength="4"/>
+                <input placeholder="2222" maxlength="4" />
+                <input placeholder="3333" maxlength="4" />
+                <input placeholder="4444" maxlength="4" />
+            </div>
+            <div class="cardExpiration">Expiration Date:<br/>
+              <input class="month" placeholder="Mo" maxlength="2"/> / <input class="year" placeholder="Year" maxlength="4"/>
+            </div>
+            <div class="cardSecurity">Security Code:<br/>
+              <input class="csc" placeholder="CSC" maxlength="4"/>
+               </div>
+                <button type="submit"  onclick="alert('You Booking has been done successfully.Enjoy your trip!')">Book Now</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
